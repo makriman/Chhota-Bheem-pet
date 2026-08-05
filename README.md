@@ -5,13 +5,19 @@ the open "pet-pack" format (`pet.json` + a sprite atlas). Chotu sits on your scr
 think, and reacts while your agent works.
 
 Made primarily as a **Codex pet**, with instructions below for using the exact same package on
-**Claude Code**, **Cursor**, and other agent CLIs via compatible companion apps.
+**Claude Code**, **Cursor**, and other agent CLIs via compatible companion apps. Ships in both
+**v2** and **v1** sprite formats, so it works on every runtime in the ecosystem.
+
+<div align="center">
+  <img src="preview/idle.gif" alt="Chotu idle animation" width="140">
+</div>
 
 ## Table of contents
 
 - [Meet Chotu](#meet-chotu)
 - [About Chhota Bheem](#about-chhota-bheem)
 - [What's in this repo](#whats-in-this-repo)
+- [Compatibility](#compatibility)
 - [Use it with Codex (native)](#use-it-with-codex-native)
 - [Use it with Claude Code](#use-it-with-claude-code)
 - [Use it with Cursor, Windsurf & other agents](#use-it-with-cursor-windsurf--other-agents)
@@ -25,12 +31,18 @@ Made primarily as a **Codex pet**, with instructions below for using the exact s
 |---|---|
 | **Name** | Chotu |
 | **Vibe** | A cheerful, brave young hero who keeps you company while you work |
-| **Sprite version** | v2 (11-row atlas — 9 animation states + 16 look directions) |
-| **Format** | `pet.json` + `spritesheet.webp`, transparent background, 1536×2288px |
+| **Sprite version** | v2 (11-row atlas — 9 animation states + 16 look directions), plus a v1 build |
+| **Format** | `pet.json` + `spritesheet.webp`, transparent background, 1536×2288px (v2) / 1536×1872px (v1) |
 
 Chotu idles quietly in the corner of your screen, perks up when your agent starts running, and
 celebrates when a task finishes — the same "ambient status" idea Codex pioneered, just wearing a
 different face.
+
+All nine animation states, on a transparency checkerboard:
+
+<div align="center">
+  <img src="preview/contact-sheet.png" alt="Chotu contact sheet — all nine animation rows" width="620">
+</div>
 
 ## About Chhota Bheem
 
@@ -52,14 +64,37 @@ while you code — nothing more. See [Disclaimer & credits](#disclaimer--credits
 
 ```text
 .
-├── pet.json          # Pet manifest (id, display name, sprite version, sprite path)
-├── spritesheet.webp  # 1536x2288 sprite atlas, 8x11 grid, transparent background
-└── README.md         # You are here
+├── pet.json               # v2 manifest (id, display name, sprite version, sprite path)
+├── spritesheet.webp       # v2 atlas — 1536x2288, 8x11 grid, transparent background
+├── v1/
+│   ├── pet.json           # v1 manifest, for runtimes that only speak the 9-row atlas
+│   └── spritesheet.webp   # v1 atlas — 1536x1872, 8x9 grid
+├── preview/
+│   ├── idle.gif           # Idle loop
+│   └── contact-sheet.png  # All 9 animation rows on a transparency checkerboard
+└── README.md              # You are here
 ```
 
 This is a **local custom pet package** in the open pet-pack format — no build step, no
 dependencies. Point a compatible pet app at this folder (or copy it into that app's pets
 directory) and it just works.
+
+## Compatibility
+
+The ecosystem is split between two sprite-atlas revisions. Chotu ships both, so pick the folder
+that matches your runtime:
+
+| Sprite version | Atlas | Grid | Use this folder | Runtimes |
+|---|---|---|---|---|
+| **v2** | 1536×2288 | 8 × 11 | repo root | Codex (native), AgentPet, Claude Pet Companion, clawd-on-desk, most current apps |
+| **v1** | 1536×1872 | 8 × 9 | [`v1/`](v1) | OpenPets, Petty, PetHatch, and other 9-row-only players |
+
+The v1 build is the same artwork — it is the nine standard animation rows of the v2 atlas, with
+the 16 look-direction rows (which v1 runtimes don't read) omitted. Nothing is redrawn or rescaled.
+
+> **Heads-up:** a v1-only runtime will *reject* or misrender the 2288px-tall v2 sheet, and Codex
+> will silently treat a pet as v1 if `spriteVersionNumber` is missing. Match the manifest to the
+> atlas and you'll avoid both traps.
 
 ## Use it with Codex (native)
 
@@ -115,6 +150,23 @@ enable the relevant integration under **Settings → General** in AgentPet. Note
 Codex agents currently only report **working / done**, not the finer-grained
 **waiting-for-input** state.
 
+### Other runtimes
+
+| Runtime | Platform | Notes |
+|---|---|---|
+| [OpenPets](https://github.com/alvinunreal/openpets) | macOS, Linux, Windows | Use the **v1** build. Local-first companion platform with a plugin SDK. |
+| [clawd-on-desk](https://github.com/rullerzhou-afk/clawd-on-desk) | Cross-platform | Imports Codex pet packages directly — **v2** works. `Settings… → Theme → import`. |
+| [Petty](https://github.com/LeslieLeung/petty) | Cross-platform | Codex-compatible pet player. Use the **v1** build. |
+| [petdex](https://petdex.dev) | macOS, Linux, Windows | Gallery + CLI + desktop app spanning Codex, Claude Code, OpenCode, and Gemini CLI. |
+
+Generic manual install for anything that reads a pet folder:
+
+```bash
+git clone https://github.com/makriman/Chhota-Bheem-pet.git chotu
+# v2 runtimes: point them at chotu/
+# v1 runtimes: point them at chotu/v1/
+```
+
 ## Pet package format
 
 `pet.json` describes the manifest:
@@ -129,16 +181,31 @@ Codex agents currently only report **working / done**, not the finer-grained
 }
 ```
 
-The spritesheet is an 8-column × 11-row grid of 192×208px cells on a transparent background:
+The spritesheet is an 8-column × 11-row grid of 192×208px cells on a transparent background.
 
-- **Rows 0–8** — standard animation states (idle, running, waiting, failed, review, jumping,
-  waving, and two extra slots), 8 frames each.
-- **Rows 9–10** — 16 look directions in 22.5° steps, clockwise from "up" (row 9 = 0°–157.5°, row
-  10 = 180°–337.5°). The front-facing "neutral" direction has no dedicated cell and falls back to
-  idle.
+**Rows 0–8** are the standard animation states, in this fixed order:
+
+| Row | State | Meaning |
+|---|---|---|
+| 0 | `idle` | Resting loop |
+| 1 | `running-right` | Rightward movement / drag |
+| 2 | `running-left` | Leftward movement / drag |
+| 3 | `waving` | Greeting, launch, attention |
+| 4 | `jumping` | Celebration, task completed |
+| 5 | `failed` | Tool failure, denied permission |
+| 6 | `waiting` | Waiting for your input or approval |
+| 7 | `running` | Active work in progress |
+| 8 | `review` | Response finished, ready to read |
+
+Unused cells within a row are fully transparent — rows do not all need 8 frames.
+
+**Rows 9–10** hold 16 look directions in 22.5° steps, clockwise from "up" (row 9 = 0°–157.5°,
+row 10 = 180°–337.5°). `000` means up / 12 o'clock, not front. The front-facing "neutral"
+direction is the no-vector deadzone and falls back to idle. These two rows are v2-only.
 
 Want to make your own variant? Fork this repo, swap in your own `spritesheet.webp` (same
-1536×2288px / 8×11 layout), update `pet.json`, and it's compatible everywhere this one is.
+1536×2288px / 8×11 layout), update `pet.json`, and it's compatible everywhere this one is. To
+regenerate the v1 build after changing the art, crop the top 1872px of the v2 atlas.
 
 ## Disclaimer & credits
 
