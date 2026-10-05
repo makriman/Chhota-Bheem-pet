@@ -1,0 +1,38 @@
+{
+  "ok": true,
+  "file": "v1/spritesheet.webp",
+  "sha256": "9d3e734e440bf09297cf8c7e3044486ad51a6822e9240409b704bcd0d30dcfad",
+  "encoded_bytes": 1184898,
+  "format": "WEBP",
+  "size": [
+    1536,
+    1872
+  ],
+  "transparent_rgb_residue_pixels": 0,
+  "sprite_version": 1,
+  "frames_per_row": [
+    6,
+    8,
+    8,
+    4,
+    5,
+    8,
+    6,
+    6,
+    6
+  ],
+  "motion_geometry": {
+    "idle_baseline": 204,
+    "jump_baselines": [
+      204,
+      197,
+      185,
+      197,
+      204
+    ],
+    "lift_pixels": 19,
+    "landing_delta_pixels": 0
+  },
+  "errors": [],
+  "scope": "Pixel geometry only. Direction meaning, identity, and playback require visual review."
+}

@@ -1,0 +1,73 @@
+{
+  "ok": true,
+  "atlas": "chotu-repair/final/spritesheet-extended.webp",
+  "encoded_bytes": 1505180,
+  "sha256": "3390a7b481c3feea87ed94a67d09393cf62621d0be47852c83a6c58d7605af14",
+  "jump": {
+    "idle_baseline": 202,
+    "jump_baselines": [
+      202,
+      194,
+      182,
+      194,
+      202
+    ],
+    "airborne_lift_pixels": 20,
+    "landing_delta_pixels": 0
+  },
+  "look_registration": {
+    "neutral_center_x": 95.5,
+    "look_centers_x": [
+      99.0,
+      88.0,
+      87.0,
+      87.0,
+      86.0,
+      91.5,
+      96.0,
+      97.0,
+      92.0,
+      90.0,
+      90.0,
+      90.5,
+      92.0,
+      97.0,
+      99.0,
+      99.0
+    ],
+    "look_widths": [
+      88,
+      82,
+      84,
+      84,
+      86,
+      81,
+      80,
+      80,
+      76,
+      82,
+      80,
+      79,
+      76,
+      84,
+      90,
+      88
+    ],
+    "maximum_center_drift_pixels": 9.5,
+    "maximum_width_ratio": 1.1842105263157894
+  },
+  "errors": [],
+  "warnings": [
+    "look direction 022.5 accepted with a reviewed warning",
+    "look direction 045 accepted with a reviewed warning",
+    "look direction 112.5 accepted with a reviewed warning",
+    "look direction 202.5 accepted with a reviewed warning",
+    "look direction 225 accepted with a reviewed warning",
+    "look direction 315 accepted with a reviewed warning",
+    "look direction 337.5 accepted with a reviewed warning",
+    "000->022.5 diff is a local outlier (2865 pixels vs neighbor average 1312)",
+    "000->022.5 center shift is high (11.0px)",
+    "090->112.5 diff is a local outlier (1658 pixels vs neighbor average 1102)",
+    "157.5->180 diff is a local outlier (2731 pixels vs neighbor average 1561)"
+  ]
+}

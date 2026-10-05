@@ -1,12 +1,17 @@
 # Chhota Bheem Pet — Chotu 🥟💪
 
-A pixel-art desktop companion pet, inspired by **Chhota Bheem**, built for AI coding CLIs that support
+A cartoon desktop companion pet, inspired by **Chhota Bheem**, built for apps that support
 the open "pet-pack" format (`pet.json` + a sprite atlas). Chotu sits on your screen, idles while you
 think, and reacts while your agent works.
 
 Made primarily as a **Codex pet**, with instructions below for using the exact same package on
 **Claude Code**, **Cursor**, and other agent CLIs via compatible companion apps. Ships in both
-**v2** and **v1** sprite formats, so it works on every runtime in the ecosystem.
+**v2** and **v1** sprite formats for compatible runtimes.
+
+For an OpenAI dot, follow [the cloud import and dot-selection instructions](docs/openai-dots.md).
+Copying a local pet folder does not change a cloud dot's icon. Cloud import, dot selection,
+and Work-mode companion selection are separate operations. The community-runtime instructions
+below are reference instructions; they are not a record of tests performed on those apps.
 
 <div align="center">
   <img src="preview/idle.gif" alt="Chotu idle animation" width="140">
@@ -18,6 +23,7 @@ Made primarily as a **Codex pet**, with instructions below for using the exact s
 - [About Chhota Bheem](#about-chhota-bheem)
 - [What's in this repo](#whats-in-this-repo)
 - [Compatibility](#compatibility)
+- [Use with an OpenAI dot](docs/openai-dots.md)
 - [Use it with Codex (native)](#use-it-with-codex-native)
 - [Use it with Claude Code](#use-it-with-claude-code)
 - [Use it with Cursor, Windsurf & other agents](#use-it-with-cursor-windsurf--other-agents)
@@ -38,11 +44,26 @@ Chotu idles quietly in the corner of your screen, perks up when your agent start
 celebrates when a task finishes — the same "ambient status" idea Codex pioneered, just wearing a
 different face.
 
-All nine animation states, on a transparency checkerboard:
+All nine animation states and sixteen look poses, on a transparency checkerboard:
 
 <div align="center">
-  <img src="preview/contact-sheet.png" alt="Chotu contact sheet — all nine animation rows" width="620">
+  <img src="preview/contact-sheet.png" alt="Chotu contact sheet — nine animation rows and sixteen look poses" width="620">
 </div>
+
+### Motion and validation
+
+[All states (GIF)](preview/all-states.gif) · [MP4](preview/all-states.mp4) · [Jump transition](preview/idle-jump-idle.gif) · [Look loop](preview/look-loop.gif) · [Static icon](preview/chotu-icon.png)
+
+The repaired atlas leaves unused idle cells empty, adds a visible jump with a stable landing,
+and uses head poses for all sixteen look directions. See the [validation record](validation/README.md)
+for exact-byte checks, independent review, and remaining visual limitations.
+
+To reproduce previews with Pillow installed:
+
+```sh
+python3 tools/render_previews.py spritesheet.webp --output-dir preview
+# Optional MP4: install imageio-ffmpeg and add --mp4
+```
 
 ## About Chhota Bheem
 
@@ -71,7 +92,13 @@ while you code — nothing more. See [Disclaimer & credits](#disclaimer--credits
 │   └── spritesheet.webp   # v1 atlas — 1536x1872, 8x9 grid
 ├── preview/
 │   ├── idle.gif           # Idle loop
-│   └── contact-sheet.png  # All 9 animation rows on a transparency checkerboard
+│   ├── contact-sheet.png  # Nine animation rows plus sixteen look poses
+│   ├── all-states.gif     # All nine states, also available as MP4
+│   ├── idle-jump-idle.gif # Jump transition
+│   └── chotu-icon.png     # Static first-idle-frame identity
+├── docs/openai-dots.md    # Cloud import and separate dot selection
+├── tools/                # Reproducible geometry checks and previews
+├── validation/           # Exact-byte QA reports and known limitations
 └── README.md              # You are here
 ```
 
@@ -197,7 +224,9 @@ The spritesheet is an 8-column × 11-row grid of 192×208px cells on a transpare
 | 7 | `running` | Active work in progress |
 | 8 | `review` | Response finished, ready to read |
 
-Unused cells within a row are fully transparent — rows do not all need 8 frames.
+The exact frame counts for rows 0–8 are **6, 8, 8, 4, 5, 8, 6, 6, 6**.
+Unused cells within a row are fully transparent. In particular, idle columns 6 and 7
+(counting from zero) must be empty.
 
 **Rows 9–10** hold 16 look directions in 22.5° steps, clockwise from "up" (row 9 = 0°–157.5°,
 row 10 = 180°–337.5°). `000` means up / 12 o'clock, not front. The front-facing "neutral"
