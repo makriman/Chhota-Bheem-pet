@@ -1,0 +1,998 @@
+{
+  "ok": true,
+  "frames_root": "chotu-repair/qa/final-frames",
+  "states": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review"
+  ],
+  "errors": [],
+  "warnings": [
+    "idle used extraction method stable-slots; confirm motion playback remains stable and unclipped",
+    "running-right used extraction method stable-slots; confirm motion playback remains stable and unclipped",
+    "running-left used extraction method stable-slots; confirm motion playback remains stable and unclipped",
+    "waving used extraction method stable-slots; confirm motion playback remains stable and unclipped",
+    "failed used extraction method stable-slots; confirm motion playback remains stable and unclipped",
+    "waiting used extraction method stable-slots; confirm motion playback remains stable and unclipped",
+    "running used extraction method stable-slots; confirm motion playback remains stable and unclipped",
+    "review used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+  ],
+  "rows": [
+    {
+      "state": "idle",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "idle used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/idle/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9702,
+          "bbox": [
+            57,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/idle/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9564,
+          "bbox": [
+            57,
+            31,
+            133,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/idle/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9494,
+          "bbox": [
+            58,
+            31,
+            133,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/idle/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9605,
+          "bbox": [
+            57,
+            31,
+            133,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/idle/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9462,
+          "bbox": [
+            58,
+            31,
+            133,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "chotu-repair/qa/final-frames/idle/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9416,
+          "bbox": [
+            58,
+            31,
+            132,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running-right",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "running-right used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/running-right/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11278,
+          "bbox": [
+            42,
+            31,
+            148,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/running-right/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11669,
+          "bbox": [
+            40,
+            31,
+            151,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/running-right/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12314,
+          "bbox": [
+            35,
+            31,
+            156,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/running-right/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11386,
+          "bbox": [
+            40,
+            31,
+            151,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/running-right/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12118,
+          "bbox": [
+            37,
+            31,
+            153,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "chotu-repair/qa/final-frames/running-right/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10711,
+          "bbox": [
+            46,
+            31,
+            145,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "chotu-repair/qa/final-frames/running-right/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11445,
+          "bbox": [
+            42,
+            31,
+            148,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "chotu-repair/qa/final-frames/running-right/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10437,
+          "bbox": [
+            51,
+            31,
+            140,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running-left",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "running-left used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/running-left/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11260,
+          "bbox": [
+            42,
+            31,
+            148,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/running-left/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11669,
+          "bbox": [
+            40,
+            31,
+            151,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/running-left/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12314,
+          "bbox": [
+            35,
+            31,
+            156,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/running-left/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11386,
+          "bbox": [
+            40,
+            31,
+            151,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/running-left/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 12017,
+          "bbox": [
+            39,
+            31,
+            151,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "chotu-repair/qa/final-frames/running-left/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10714,
+          "bbox": [
+            47,
+            31,
+            144,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "chotu-repair/qa/final-frames/running-left/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 11446,
+          "bbox": [
+            35,
+            31,
+            156,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "chotu-repair/qa/final-frames/running-left/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10439,
+          "bbox": [
+            51,
+            31,
+            140,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "waving",
+      "expected_frames": 4,
+      "actual_frames": 4,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "waving used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/waving/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9309,
+          "bbox": [
+            57,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/waving/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9887,
+          "bbox": [
+            48,
+            31,
+            143,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/waving/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10086,
+          "bbox": [
+            43,
+            31,
+            147,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/waving/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9422,
+          "bbox": [
+            57,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "jumping",
+      "expected_frames": 5,
+      "actual_frames": 5,
+      "extraction_method": "components",
+      "ok": true,
+      "errors": [],
+      "warnings": [],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/jumping/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10196,
+          "bbox": [
+            56,
+            30,
+            136,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/jumping/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10703,
+          "bbox": [
+            40,
+            20,
+            152,
+            197
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/jumping/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10457,
+          "bbox": [
+            48,
+            15,
+            144,
+            185
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/jumping/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9987,
+          "bbox": [
+            41,
+            22,
+            151,
+            197
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/jumping/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 10253,
+          "bbox": [
+            56,
+            30,
+            136,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "failed",
+      "expected_frames": 8,
+      "actual_frames": 8,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "failed used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/failed/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9174,
+          "bbox": [
+            51,
+            31,
+            139,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/failed/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8691,
+          "bbox": [
+            57,
+            31,
+            133,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/failed/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8673,
+          "bbox": [
+            55,
+            31,
+            136,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/failed/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8611,
+          "bbox": [
+            52,
+            31,
+            138,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/failed/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8562,
+          "bbox": [
+            59,
+            31,
+            132,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "chotu-repair/qa/final-frames/failed/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8611,
+          "bbox": [
+            60,
+            31,
+            131,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 6,
+          "file": "chotu-repair/qa/final-frames/failed/06.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8729,
+          "bbox": [
+            59,
+            31,
+            132,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 7,
+          "file": "chotu-repair/qa/final-frames/failed/07.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9293,
+          "bbox": [
+            51,
+            31,
+            140,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "waiting",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "waiting used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/waiting/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9211,
+          "bbox": [
+            53,
+            31,
+            138,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/waiting/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9632,
+          "bbox": [
+            40,
+            31,
+            151,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/waiting/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9781,
+          "bbox": [
+            38,
+            31,
+            153,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/waiting/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9963,
+          "bbox": [
+            40,
+            31,
+            150,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/waiting/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9331,
+          "bbox": [
+            56,
+            31,
+            135,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "chotu-repair/qa/final-frames/waiting/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9240,
+          "bbox": [
+            55,
+            31,
+            136,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "running",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "running used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/running/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9917,
+          "bbox": [
+            56,
+            31,
+            135,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/running/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9887,
+          "bbox": [
+            53,
+            31,
+            138,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/running/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9691,
+          "bbox": [
+            57,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/running/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9490,
+          "bbox": [
+            57,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/running/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9995,
+          "bbox": [
+            52,
+            31,
+            138,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "chotu-repair/qa/final-frames/running/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9838,
+          "bbox": [
+            56,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    },
+    {
+      "state": "review",
+      "expected_frames": 6,
+      "actual_frames": 6,
+      "extraction_method": "stable-slots",
+      "ok": true,
+      "errors": [],
+      "warnings": [
+        "review used extraction method stable-slots; confirm motion playback remains stable and unclipped"
+      ],
+      "frames": [
+        {
+          "index": 0,
+          "file": "chotu-repair/qa/final-frames/review/00.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9311,
+          "bbox": [
+            57,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 1,
+          "file": "chotu-repair/qa/final-frames/review/01.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9311,
+          "bbox": [
+            51,
+            31,
+            140,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 2,
+          "file": "chotu-repair/qa/final-frames/review/02.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9291,
+          "bbox": [
+            57,
+            31,
+            133,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 3,
+          "file": "chotu-repair/qa/final-frames/review/03.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9615,
+          "bbox": [
+            51,
+            31,
+            139,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 4,
+          "file": "chotu-repair/qa/final-frames/review/04.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 8967,
+          "bbox": [
+            57,
+            31,
+            134,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        },
+        {
+          "index": 5,
+          "file": "chotu-repair/qa/final-frames/review/05.png",
+          "width": 192,
+          "height": 208,
+          "nontransparent_pixels": 9389,
+          "bbox": [
+            57,
+            31,
+            133,
+            204
+          ],
+          "edge_pixels": 0,
+          "chroma_adjacent_pixels": 0
+        }
+      ]
+    }
+  ]
+}

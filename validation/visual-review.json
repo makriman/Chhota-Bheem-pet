@@ -1,0 +1,71 @@
+{
+  "reviewer": "independent-final-visual",
+  "status": "pass",
+  "blocking": false,
+  "source": "chotu-repair/final/spritesheet-extended.webp",
+  "sha256": "3390a7b481c3feea87ed94a67d09393cf62621d0be47852c83a6c58d7605af14",
+  "prior_report": "qa/independent-final-visual.json",
+  "prior_failed_candidate_preserved": true,
+  "method": {
+    "exact_encoded_sheet_viewed": true,
+    "contact_sheet_viewed": true,
+    "jump_transition_viewed": true,
+    "native_apex_frame_viewed": true,
+    "ordered_decoded_gif_sequences": [
+      "idle-jump-idle",
+      "look-loop"
+    ],
+    "animated_playback_observed": false,
+    "animation_assessment": "Inspected all 17 decoded idle-jump-idle frames and all 16 decoded look-loop frames in ordered strips. Actual playback timing and smoothness were not directly observed.",
+    "measurements": "Alpha bounds and head-region widths taken from exact current encoded WebP."
+  },
+  "checks": [
+    {
+      "name": "idle_jump_scale_continuity",
+      "status": "pass",
+      "evidence": "The previously enlarged crouched takeoff is gone. Jumping frame 0 and landing frame 4 closely match idle apparent head size, torso length and whole-body height. Uppermost 50-pixel alpha-region widths are idle0=76 px and jumping0-4=77,80,78,77,77 px (about 1-5% variation). The apex uppermost-60-pixel width is 88 px because the raised hands enter that region; the head-only upper 50 px remains 78 px. Ordered frames do not show the previous broadening/shrinking on entry or landing."
+    },
+    {
+      "name": "actual_jump_and_landing",
+      "status": "pass",
+      "evidence": "Exact any-alpha lower bounds are y=204,197,185,197,204 for jumping frames 0-4, versus idle y=204. Feet visibly rise, peak 19 px above idle baseline, descend and land at the same baseline. Arm and lower-garment/leg pose changes reinforce a small hop. No stationary ground-pinned jump."
+    },
+    {
+      "name": "jump_alignment_identity",
+      "status": "pass",
+      "evidence": "Jump remains centered and uses the same character, face, hair, jewelry, clothing, palette, and outline treatment as idle. Small natural drawing/pose variations remain, without conspicuous proportion or registration jumps. Landing matches takeoff and transitions back to idle cleanly in the ordered strip."
+    },
+    {
+      "name": "clipping_floating_artifacts",
+      "status": "pass",
+      "evidence": "Exact atlas, contact sheet, transition stills, and native apex show intact attached limbs and feet, no clipped silhouette, detached effects, neighboring-cell bleed, or obvious alpha holes. Grounded jumping frames end at the same y=204 as idle; airborne frames are intentionally above it."
+    },
+    {
+      "name": "other_standard_states",
+      "status": "pass",
+      "evidence": "Current contact sheet and exact sheet retain calm blinking idle; right/left-facing gait poses; attached-hand wave; failure reaction; open-palm waiting; planted-foot focused-work row; and chin/head inspection gestures in review. Prior sequential gait review found changing stride and gathered phases. No new defect is visible in these preserved rows."
+    },
+    {
+      "name": "look_cardinals",
+      "status": "pass",
+      "evidence": "In the current exact sheet and all 16 ordered decoded look frames, 000 is clearly up, 090 screen-right, 180 down, and 270 screen-left. Physical head pitch/yaw and eye direction support the labels."
+    },
+    {
+      "name": "look_anchor_and_boundaries",
+      "status": "pass",
+      "evidence": "Torso/feet remain anchored through the sweep, with y=202 alpha bottom throughout all 16 frames. The consistent 2 px difference from idle baseline is visually minor. 157.5 to 180 and 337.5 to 000 progress in the correct direction without a conspicuous registration jump or reversal."
+    },
+    {
+      "name": "look_intermediate_spacing",
+      "status": "warning",
+      "evidence": "22.5/45/67.5 and 202.5/225/247.5 remain visually similar clusters, giving uneven angular spacing. Intended quadrants remain readable and ordered progression is coherent. This is nonblocking under the intermediate-similarity allowance."
+    }
+  ],
+  "remaining_visual_blockers": [],
+  "limitations": [
+    "Assessment uses ordered decoded frames and stills; no claim of observed animated playback.",
+    "This independent visual pass does not replace exact-byte structural/chroma validation or other workflow gates."
+  ],
+  "source_image_files_modified": false,
+  "qa_derived_outputs": "qa/independent-final-repaired-decoded/"
+}
